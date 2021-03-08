@@ -1,7 +1,7 @@
 #include<stdio.h>
 int findnthugly(int n);
 int isugly(int i);
-int maxDivide(int i,int j);
+int divide(int i,int j);
 int main()
 {
     int n;
