@@ -15,7 +15,7 @@ int main()
     printf("%d",i);
     return 0;
 }
-int isugly(j)
+int isugly(int j)
 {
         while (j % 2 == 0)
         j = j / 2;
