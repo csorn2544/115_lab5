@@ -1,40 +1,31 @@
 #include<stdio.h>
-int findnthugly(int n);
-int isugly(int i);
-int divide(int i,int j);
+int isugly(int j);
 int main()
 {
-    int n;
+    int n,i=1,count=1;
     scanf("%d",&n);
-    int ugly = findnthugly(n);
-    printf("%d",ugly);
-}
-int findnthugly(int n)
-{
-    int i=1,count=1;
     while(count<n)
     {
         i++;
         if(isugly(i)==1)
+        {
             count++;
+        }
     }
-    return i;
+    printf("%d",i);
+    return 0;
 }
-int isugly(int i)
+int isugly(j)
 {
-    i=divide(i,2);
-    i=divide(i,3);
-    i=divide(i,5);
-    if(i==1)
-    {
-        return 1;
-    }
-    else return 0;
+        while (j % 2 == 0)
+        j = j / 2;
+        while (j % 3 == 0)
+        j = j / 3;
+        while (j % 5 == 0)
+        j = j / 5;
+        if(j==1)
+        {
+            return 1;
+        }
+        else return 0;
 }
-int divide(i,j)
-{
-    while (i % j == 0)
-        i = i / j;
-    return i;
-}
-
